@@ -1,0 +1,3 @@
+include ':usbGpsLib'
+include ':app'
+rootProject.name = "UsbGpsLib"

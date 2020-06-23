@@ -5,6 +5,8 @@ import com.zy.usbgpslib.enums.GPGLLStatusEnum;
 import com.zy.usbgpslib.util.GpsTools;
 import com.zy.usbgpslib.util.StringUtils;
 
+import java.util.Date;
+
 public class GspWrapper {
 
     private GspBase gpgga;
@@ -49,6 +51,7 @@ public class GspWrapper {
             String status = GPGLLStatusEnum.get(llArr6).getValue();
             gpsInfo.setLocationStatus(status);
         }
+        gpsInfo.setDate(new Date());
         return gpsInfo;
 
     }
